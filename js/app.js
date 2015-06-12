@@ -3,14 +3,14 @@ $(document).ready(function(){ init() })
 var public_spreadsheet_url ='https://docs.google.com/spreadsheets/d/153rVXCt4nlQn8Fj80GmWOLO5_aF4phW0MZrNIZfpUc8/pubhtml?gid=291196347&single=true'
 
 function init() {
-  var tabletop = Tabletop.init( { key: public_spreadsheet_url,
-   callback: showInfo,
-   simpleSheet: true } )
+  Tabletop.init( { key: public_spreadsheet_url,
+    callback: showInfo,
+    simpleSheet: true } )
 }
 
 
 function showInfo(data) {
-  thing = data // if you type `thing` in the console it's now a global variable so you can see the objects
+  //thing = data // if you type `thing` in the console it's now a global variable so you can see the returned objects
   $.each(data, function (i, each) {
     $('#comboBoxData').append('<li>' + '<b>Exercise</b>: ' + each.Exercise + '<br />' + '<b>Description:</b> ' + each.Description +
       '<br />' + '<b>Objective:</b> ' + each.Objective + '<br />' + '<b>Notes:</b> ' + each.Notes + '<br />' + '<b>Slides: </b> ' + 
