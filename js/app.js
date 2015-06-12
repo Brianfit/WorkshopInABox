@@ -12,15 +12,18 @@ function init() {
 function showInfo(data) {
   thing = data // if you type `thing` in the console it's now a global variable so you can see the objects
   $.each(data, function (i, each) {
-    $('#comboBoxData').append('<li>' + JSON.stringify(each) + '</li>')
+    $('#comboBoxData').append('<li>' + '<b>Exercise</b>: ' + each.Exercise + '<br />' + '<b>Description:</b> ' + each.Description +
+      '<br />' + '<b>Objective:</b> ' + each.Objective + '<br />' + '<b>Notes:</b> ' + each.Notes + '<br />' + '<b>Slides: </b> ' + 
+      each.Slides + '<br />' + '<b>Format:</b> ' + each.Format + '<br />' + '<b>Length:</b> ' + each.Length + '<b>Stimulus:</b> ' + 
+      each.Stimulus + '<br />' + '<b>Subject1:</b> ' + each.Subject1 + '<br />' + '<b>Subject2:</b> ' + each.Subject2 + '</li>')
   })
 
   $('#comboBox').bind('keydown keypress keyup change', function() {
-    var search = this.value.toLowerCase();
-    var $li = $("#comboBoxData li").hide();
+    var search = this.value.toLowerCase()
+    var $li = $("#comboBoxData li").hide()
     $li.filter(function() {
-      return $(this).text().toLowerCase().indexOf(search) >= 0;
-    }).show();
+      return $(this).text().toLowerCase().indexOf(search) >= 0
+    }).show()
   })
 }
 
