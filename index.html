@@ -49,20 +49,24 @@
 <br />
 <br /><br /><br /><br /><br />
 
- 
-<!-- Insert booklist.css here (https://gist.github.com/2585089) -->
- 
-<!-- Insert booklist.js here (https://gist.github.com/2585071) -->
+
+<!-- 
+This is where we'll build the menus. I'm thinking just two: Objective and Format. Challenge: figure out how to get only the unique menu items (so not Comprehension, Comprehension, Ice Breaker, etc) -- this may be done programatically through Tabletop.js or of course can create a new menu column in the spreadsheet and just pull unique values into that. 
+ -->
 <div id="TypeMenu"></div>
+
+<!-- 
+
+This is where we now show one description and name, but will eventually display multiple exercises that match the criteria of the clicked menu item. 
+ -->
+
 <div id="ExerciseDescription"></div>
-
-
 
 
 </div> <!-- container -->
 
 
-
+<!-- This is nice pictures for the bottom of the page. -->
 <div style="float:left">
 <img src="images/story-left.png" width="100px" class="pull-left navbar-fixed-bottom" style="verticle-align:top; margin-bottom:32px;">
 </div>
@@ -91,36 +95,28 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-<!-- 
-<script>
-function init() {
-  Tabletop.init( { key: '153rVXCt4nlQn8Fj80GmWOLO5_aF4phW0MZrNIZfpUc8',
-                   callback: function(data, tabletop) { console.log(data) },
-                   simpleSheet: true } )
-}
-</script>
- -->
+
 
 <script type="text/javascript">
  	$(document).ready(function(){ init() });
-
+// 
+// Here's where the magic happens. Load the google spreadsheet magic link into a variable.
   var public_spreadsheet_url ='https://docs.google.com/spreadsheets/d/153rVXCt4nlQn8Fj80GmWOLO5_aF4phW0MZrNIZfpUc8/pubhtml?gid=291196347&single=true'; 
 
+// Initialize the spreadsheet. This runs through each row of the spreadsheet and loads a set of data arrays
   function init() {
     Tabletop.init( { key: public_spreadsheet_url,
                      callback: showInfo,
                      simpleSheet: true } )
   }
 
-//   function showInfo(data, tabletop) {
-//     alert("Successfully processed!")
-//     console.log(data);
-//     $("#ExerciseDescription").html(tabletop.data()[1].Statement);
-//   }
-
- function showInfo(data) {
+function showInfo(data) {
         // data comes through as a simple array since simpleSheet is turned on
+//         Doofy alert just tells us the code got this far: disable in final
         alert("Successfully processed " + data.length + " rows!")
+        
+        Now we load some data into some html and make it display nicely at the above #ExerciseDescription DIV tag with an append, a nice fade in. You can see the Data objects in the Console 
+        
 $('<strong>'+data[3].Exercise+'</strong> <br />'+data[3].Description+'<br />').hide().appendTo('#ExerciseDescription').fadeIn(3500);
         console.log(data);
       }
