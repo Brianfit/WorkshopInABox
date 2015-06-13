@@ -1,3 +1,13 @@
+
+UPDATE: Thanks Gareth for a far better idea than rolling menus: filter search on any List item. Brilliant. I've prettied up the display and taken your suggestion to publish at Surge.sh: current version of code is here: http://workshopinabox.surge.sh/
+
+Remaining: Move Filter Search into header so it's persistent when page scrolls. 
+Maybe conditionally display fields only if non empty?
+Brian must learn Handlebars
+Brian has to regularize content in the spreadsheet and explicate those Subject1 and Subject2 fields as shifts and er... whatever we intended when we put those in there. 
+
+
+
 Work in progress:
 
 A nice looking web interface for a database of workshop exercises.
