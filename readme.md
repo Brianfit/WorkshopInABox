@@ -7,6 +7,7 @@ Remaining: Move Search box to the right of the navbar.
 Maybe conditionally display fields only if non empty?
 Associate some glyphicons with different objectives and display them for some nice visual differentiation
 Think up some better headers than "Subject1 and Subject2"
+Fix an issue on mobile (Ios anyway) in which the bottom right graphic flashes in and over the content)
 
 
 
