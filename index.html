@@ -1,66 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <script data-cfasync="false" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="js/tabletop.js"></script>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Workshop in a Box Exercise Catalogue</title>
-	<meta name="generator" content="BBEdit 11.0" />
-	 <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-     <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+ <script data-cfasync="false" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="js/tabletop.js"></script>
+ <meta charset="utf-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Workshop in a Box Exercise Catalogue</title>
+ <meta name="generator" content="BBEdit 11.0" />
+ <!-- Bootstrap core CSS -->
+ <link href="css/bootstrap.min.css" rel="stylesheet">
+ <meta name = "viewport" content = "user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
 
 
 
 
 
-<!-- GOOGLE FONT EMBED -->
-<link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Open+Sans&subset=latin,greek,vietnamese,cyrillic,greek-ext,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
-<!--<link href='http://fonts.googleapis.com/css?family=Elsie|Droid+Serif&subset=latin,greek,vietnamese,cyrillic,greek-ext,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'> -->
+ <!-- GOOGLE FONT EMBED -->
+ <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Open+Sans&subset=latin,greek,vietnamese,cyrillic,greek-ext,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
+ <!--<link href='http://fonts.googleapis.com/css?family=Elsie|Droid+Serif&subset=latin,greek,vietnamese,cyrillic,greek-ext,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'> -->
 
-<!-- Bootstrap core CSS -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+ <!-- Bootstrap core CSS -->
+ <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 
-    
+
 </head>
 <body>
  <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Workshop in a Box: Exercise Catalogue</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+  <div class="container">
+    <div class="navbar-header">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Workshop in a Box: Exercise Catalogue</a>
+  </div>
+  <div id="navbar" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+
+    </ul>
+  </li>
+</ul>
+</div><!--/.nav-collapse -->
+</div>
+</nav>
 
 <div class="container">
 <br />
 <br /><br /><br /><br /><br />
 
 
-<!-- 
-This is where we'll build the menus. I'm thinking just two: Objective and Format. Challenge: figure out how to get only the unique menu items (so not Comprehension, Comprehension, Ice Breaker, etc) -- this may be done programatically through Tabletop.js or of course can create a new menu column in the spreadsheet and just pull unique values into that. 
- -->
 <div id="TypeMenu"></div>
+  <div id="ExerciseDescription"></div>
 
-<!-- 
+Filter search: <input type="text" id="comboBox" />
+  <ul class="list-group" id="comboBoxData">
 
-This is where we now show one description and name, but will eventually display multiple exercises that match the criteria of the clicked menu item. 
- -->
-
-<div id="ExerciseDescription"></div>
+  </ul>
+</div> <!-- container -->
 
 
 </div> <!-- container -->
@@ -68,11 +65,11 @@ This is where we now show one description and name, but will eventually display 
 
 <!-- This is nice pictures for the bottom of the page. -->
 <div style="float:left">
-<img src="images/story-left.png" width="100px" class="pull-left navbar-fixed-bottom" style="verticle-align:top; margin-bottom:32px;">
+  <img src="images/story-left.png" width="100px" class="pull-left navbar-fixed-bottom" style="verticle-align:top; margin-bottom:32px;">
 </div>
 
 <div style="position: fixed; bottom: 33px; right:0%">
-<img src="images/story-right.png" width="100px">
+  <img src="images/story-right.png" width="100px">
 </div>
 
 
@@ -81,12 +78,12 @@ This is where we now show one description and name, but will eventually display 
 <div class="navbar navbar-inverse navbar-fixed-bottom">
 
 
-<div class="container">
+  <div class="container">
 
 
-       
 
-</div>
+
+  </div>
 </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -94,6 +91,7 @@ This is where we now show one description and name, but will eventually display 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 
 
@@ -123,3 +121,19 @@ $('<strong>'+data[3].Exercise+'</strong> <br />'+data[3].Description+'<br />').h
 </script>
 </body>
 </html>
+=======
+    <!-- <script src="js/ie10-viewport-bug-workaround.js"></script> -->
+<!--
+<script>
+function init() {
+  Tabletop.init( { key: '153rVXCt4nlQn8Fj80GmWOLO5_aF4phW0MZrNIZfpUc8',
+                   callback: function(data, tabletop) { console.log(data) },
+                   simpleSheet: true } )
+}
+</script>
+-->
+
+<script type="text/javascript" src='./js/app.js'></script>
+  </body>
+  </html>
+
