@@ -1,10 +1,12 @@
 
 UPDATE: Thanks Gareth for a far better idea than rolling menus: filter search on any List item. Brilliant. I've prettied up the display and taken your suggestion to publish at Surge.sh: current version of code is here: http://workshopinabox.surge.sh/
 
-Remaining: Move Filter Search into header so it's persistent when page scrolls. 
+Anybody who wants to help there's a couple tasks I know need doing, but feel free to embelish or improve any way you like. I love being able to take this project out as an example open source collaboration in practice. 
+
+Remaining: Move Search box to the right of the navbar.
 Maybe conditionally display fields only if non empty?
-Brian must learn Handlebars
-Brian has to regularize content in the spreadsheet and explicate those Subject1 and Subject2 fields as shifts and er... whatever we intended when we put those in there. 
+Associate some glyphicons with different objectives and display them for some nice visual differentiation
+Think up some better headers than "Subject1 and Subject2"
 
 
 
